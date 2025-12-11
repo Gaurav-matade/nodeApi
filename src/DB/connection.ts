@@ -6,12 +6,12 @@ import path from 'path';
 dotenv.config();
 
 const sequelize = new Sequelize(
-  process.env.DATABASE || '',
-  process.env.USERNAME || '',
-  process.env.PASSWORD || '',
+  process.env.DB_NAME || '',
+  process.env.DB_USER || '',
+  process.env.DB_PASSWORD || '',
   {
-    host: process.env.HOST,
-    port: Number(process.env.PORT) || 3306,
+    host: process.env.DB_HOST,
+    port: Number(process.env.DB_PORT) || 3306,
     dialect: 'mysql',
     logging: false,
     dialectOptions: {
